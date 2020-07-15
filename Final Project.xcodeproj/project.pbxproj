@@ -14,6 +14,8 @@
 		AD9E8C1124BE4F0000FA01BF /* Final_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD9E8C0F24BE4F0000FA01BF /* Final_Project.xcdatamodeld */; };
 		AD9E8C1324BE4F0400FA01BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9E8C1224BE4F0400FA01BF /* Assets.xcassets */; };
 		AD9E8C1624BE4F0400FA01BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E8C1424BE4F0400FA01BF /* LaunchScreen.storyboard */; };
+		AD9E8C1E24BF87FB00FA01BF /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E8C1D24BF87FB00FA01BF /* HomePageViewController.swift */; };
+		AD9E8C2224BF94B000FA01BF /* HomeUIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E8C2124BF94B000FA01BF /* HomeUIBarButtonItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		AD9E8C1224BE4F0400FA01BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD9E8C1524BE4F0400FA01BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD9E8C1724BE4F0400FA01BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9E8C1D24BF87FB00FA01BF /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		AD9E8C2124BF94B000FA01BF /* HomeUIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIBarButtonItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				AD9E8C0624BE4F0000FA01BF /* AppDelegate.swift */,
 				AD9E8C0824BE4F0000FA01BF /* SceneDelegate.swift */,
 				AD9E8C0A24BE4F0000FA01BF /* ViewController.swift */,
+				AD9E8C1D24BF87FB00FA01BF /* HomePageViewController.swift */,
 				AD9E8C0C24BE4F0000FA01BF /* Main.storyboard */,
+				AD9E8C2124BF94B000FA01BF /* HomeUIBarButtonItem.swift */,
 				AD9E8C1224BE4F0400FA01BF /* Assets.xcassets */,
 				AD9E8C1424BE4F0400FA01BF /* LaunchScreen.storyboard */,
 				AD9E8C1724BE4F0400FA01BF /* Info.plist */,
@@ -144,7 +150,9 @@
 				AD9E8C0B24BE4F0000FA01BF /* ViewController.swift in Sources */,
 				AD9E8C0724BE4F0000FA01BF /* AppDelegate.swift in Sources */,
 				AD9E8C1124BE4F0000FA01BF /* Final_Project.xcdatamodeld in Sources */,
+				AD9E8C1E24BF87FB00FA01BF /* HomePageViewController.swift in Sources */,
 				AD9E8C0924BE4F0000FA01BF /* SceneDelegate.swift in Sources */,
+				AD9E8C2224BF94B000FA01BF /* HomeUIBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
