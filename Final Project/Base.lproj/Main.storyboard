@@ -33,7 +33,7 @@
                                     <color key="titleColor" red="0.61178845169999996" green="0.85180962090000001" blue="0.9804156423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Cdc-xo-LyU" kind="presentation" id="M0b-XJ-Ifs"/>
+                                    <segue destination="Cdc-xo-LyU" kind="show" id="w6B-B6-7pw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,9 +87,7 @@
                                 <color key="tintColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="person.3.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="ceb-6w-Uz3" kind="popoverPresentation" popoverAnchorView="tao-Ts-QdV" id="0fY-Ry-btI">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="ceb-6w-Uz3" kind="presentation" id="eaz-rw-q1M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHl-37-wlo">
@@ -101,9 +99,7 @@
                                 <color key="tintColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="gift.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="MUu-DR-Rb6" kind="popoverPresentation" popoverAnchorView="WHl-37-wlo" id="TqD-XK-hkN">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="41X-O7-Beu" kind="show" id="bQc-Nl-8lD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WW7-yZ-Hsi">
@@ -153,6 +149,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A6O-D9-615"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JEP-jQ-hRs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSc-v3-S14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,34 +217,216 @@
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="791.51785714285711"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xG3-uV-fyt">
+        <!--Goal Tracker-->
+        <scene sceneID="a4x-Sv-lz2">
             <objects>
-                <viewController id="MUu-DR-Rb6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rSo-D0-wah">
+                <tableViewController id="dVA-2E-ycj" customClass="GoalTrackerTableViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hoW-yS-uwg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Z8p-Ex-Umq">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z8p-Ex-Umq" id="6sL-eo-mwS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dVA-2E-ycj" id="2gl-aH-Lue"/>
+                            <outlet property="delegate" destination="dVA-2E-ycj" id="Cg2-3y-pdN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Goal Tracker" id="h95-42-RdN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UJr-WK-ok1">
+                            <color key="tintColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="ix1-rH-y80" kind="show" id="mcP-gz-XRy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="tTi-SL-rdT" kind="show" identifier="moveToComplete" id="S3d-tr-QCZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pA0-hh-fxD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023" y="792"/>
+        </scene>
+        <!--Complete Goal View Controller-->
+        <scene sceneID="3t9-ee-pS5">
+            <objects>
+                <viewController id="tTi-SL-rdT" customClass="CompleteGoalViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Egs-Xw-BUH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-aF-UvT">
-                                <rect key="frame" x="115" y="63" width="179" height="70"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upx-gg-tCZ">
+                                <rect key="frame" x="20" y="219" width="374" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="ej6-bF-z9x"/>
+                                    <constraint firstAttribute="height" constant="128" id="xPT-nR-OyL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cti-dq-j2B">
+                                <rect key="frame" x="140" y="479" width="142" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="AqB-zs-77A"/>
+                                    <constraint firstAttribute="width" constant="142" id="nnR-4p-Hms"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="23"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Completed!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="completeTapped:" destination="tTi-SL-rdT" eventType="touchUpInside" id="k8G-fF-kV7"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.70024389099999995" green="0.87877977389999995" blue="0.9804156423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="pPI-BZ-V8M" firstAttribute="trailing" secondItem="6hf-aF-UvT" secondAttribute="trailing" constant="120" id="Ggm-Kw-AKK"/>
-                            <constraint firstItem="6hf-aF-UvT" firstAttribute="leading" secondItem="pPI-BZ-V8M" secondAttribute="leading" constant="115" id="Ipa-WR-6ij"/>
-                            <constraint firstItem="pPI-BZ-V8M" firstAttribute="bottom" secondItem="6hf-aF-UvT" secondAttribute="bottom" constant="675" id="ZaC-tr-G2w"/>
-                            <constraint firstItem="6hf-aF-UvT" firstAttribute="top" secondItem="pPI-BZ-V8M" secondAttribute="top" constant="63" id="aWJ-iB-u2b"/>
+                            <constraint firstItem="g5E-7z-yWa" firstAttribute="trailing" secondItem="Cti-dq-j2B" secondAttribute="trailing" constant="132" id="Cqi-fb-5qH"/>
+                            <constraint firstItem="upx-gg-tCZ" firstAttribute="top" secondItem="g5E-7z-yWa" secondAttribute="top" constant="163" id="Ftk-JT-pqM"/>
+                            <constraint firstItem="g5E-7z-yWa" firstAttribute="bottom" secondItem="Cti-dq-j2B" secondAttribute="bottom" constant="287" id="HPj-0K-0bi"/>
+                            <constraint firstItem="Cti-dq-j2B" firstAttribute="leading" secondItem="g5E-7z-yWa" secondAttribute="leading" constant="140" id="bTI-mm-Olj"/>
+                            <constraint firstItem="upx-gg-tCZ" firstAttribute="leading" secondItem="g5E-7z-yWa" secondAttribute="leading" constant="20" id="xnl-Un-yeO"/>
+                            <constraint firstItem="g5E-7z-yWa" firstAttribute="trailing" secondItem="upx-gg-tCZ" secondAttribute="trailing" constant="20" id="xvO-Om-Olc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="pPI-BZ-V8M"/>
+                        <viewLayoutGuide key="safeArea" id="g5E-7z-yWa"/>
                     </view>
+                    <navigationItem key="navigationItem" id="n7d-2r-xXy"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="upx-gg-tCZ" id="q1A-MH-Fqj"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m06-wg-zn5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Luf-Ct-2Vb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136" y="818"/>
+            <point key="canvasLocation" x="2021.7391304347827" y="1498.6607142857142"/>
+        </scene>
+        <!--Add Goal View Controller-->
+        <scene sceneID="y3H-pj-IOC">
+            <objects>
+                <viewController id="ix1-rH-y80" customClass="AddGoalViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cCH-FY-5er">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s53-Kn-yy3">
+                                <rect key="frame" x="137" y="191" width="140" height="60.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60.5" id="VwP-te-0WC"/>
+                                    <constraint firstAttribute="width" constant="140" id="f1n-KJ-83O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="45"/>
+                                <color key="textColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sei-bp-c1u">
+                                <rect key="frame" x="184" y="477.5" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="PJE-Ky-Y2c"/>
+                                    <constraint firstAttribute="height" constant="31" id="Zgp-pC-Zwe"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Does this goal take priority?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGT-Dh-0aC">
+                                <rect key="frame" x="60" y="396.5" width="293" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="gbe-ES-V5i"/>
+                                    <constraint firstAttribute="height" constant="34" id="m6z-p9-x6r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8X-mu-dov">
+                                <rect key="frame" x="115" y="548" width="192" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1zp-A2-T2P"/>
+                                    <constraint firstAttribute="width" constant="192" id="QCf-PS-myk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="ADD TO GOAL TRACKER">
+                                    <color key="titleColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addGoal:" destination="ix1-rH-y80" eventType="touchUpInside" id="lwv-6i-X9U"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-sF-aNe">
+                                <rect key="frame" x="19" y="287.5" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="ZP9-X4-rtF"/>
+                                    <constraint firstAttribute="height" constant="34" id="iDa-NK-gaD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70024389099999995" green="0.87877977389999995" blue="0.9804156423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="s53-Kn-yy3" firstAttribute="top" secondItem="oIe-8E-J2C" secondAttribute="top" constant="135" id="7n2-Eu-uh2"/>
+                            <constraint firstItem="YGT-Dh-0aC" firstAttribute="top" secondItem="nj4-sF-aNe" secondAttribute="bottom" constant="75" id="GeY-Vn-GK8"/>
+                            <constraint firstItem="nj4-sF-aNe" firstAttribute="leading" secondItem="oIe-8E-J2C" secondAttribute="leading" constant="19" id="LjE-of-PsO"/>
+                            <constraint firstItem="Sei-bp-c1u" firstAttribute="top" secondItem="YGT-Dh-0aC" secondAttribute="bottom" constant="47" id="PnV-8N-fP3"/>
+                            <constraint firstItem="Sei-bp-c1u" firstAttribute="leading" secondItem="oIe-8E-J2C" secondAttribute="leading" constant="184" id="RP1-wa-4M5"/>
+                            <constraint firstItem="oIe-8E-J2C" firstAttribute="trailing" secondItem="s53-Kn-yy3" secondAttribute="trailing" constant="137" id="WaO-IL-kse"/>
+                            <constraint firstItem="oIe-8E-J2C" firstAttribute="trailing" secondItem="Sei-bp-c1u" secondAttribute="trailing" constant="183" id="XEG-2W-iyL"/>
+                            <constraint firstItem="N8X-mu-dov" firstAttribute="leading" secondItem="oIe-8E-J2C" secondAttribute="leading" constant="115" id="Xrj-bp-C50"/>
+                            <constraint firstItem="nj4-sF-aNe" firstAttribute="top" secondItem="s53-Kn-yy3" secondAttribute="bottom" constant="36" id="ZF2-7k-Bq3"/>
+                            <constraint firstItem="nj4-sF-aNe" firstAttribute="top" secondItem="s53-Kn-yy3" secondAttribute="bottom" constant="36" id="bUO-Jg-dLK"/>
+                            <constraint firstItem="oIe-8E-J2C" firstAttribute="trailing" secondItem="N8X-mu-dov" secondAttribute="trailing" constant="107" id="be7-s9-L5l"/>
+                            <constraint firstItem="oIe-8E-J2C" firstAttribute="bottom" secondItem="N8X-mu-dov" secondAttribute="bottom" constant="228" id="eOq-BT-1xd"/>
+                            <constraint firstItem="s53-Kn-yy3" firstAttribute="leading" secondItem="oIe-8E-J2C" secondAttribute="leading" constant="137" id="fpN-6F-PB0"/>
+                            <constraint firstItem="oIe-8E-J2C" firstAttribute="trailing" secondItem="nj4-sF-aNe" secondAttribute="trailing" constant="21" id="mjh-ne-c2W"/>
+                            <constraint firstItem="oIe-8E-J2C" firstAttribute="trailing" secondItem="YGT-Dh-0aC" secondAttribute="trailing" constant="61" id="pmA-9C-GbW"/>
+                            <constraint firstItem="s53-Kn-yy3" firstAttribute="top" secondItem="oIe-8E-J2C" secondAttribute="top" constant="135" id="x5n-ra-5d3"/>
+                            <constraint firstItem="YGT-Dh-0aC" firstAttribute="leading" secondItem="oIe-8E-J2C" secondAttribute="leading" constant="60" id="x8h-Yt-rUc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oIe-8E-J2C"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vzN-hQ-9KT"/>
+                    <connections>
+                        <outlet property="prioritySwitch" destination="Sei-bp-c1u" id="Eue-Sr-MhV"/>
+                        <outlet property="textField" destination="nj4-sF-aNe" id="qH7-gI-Nbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDV-TY-vFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2869.5652173913045" y="791.51785714285711"/>
+        </scene>
+        <!--Goal Tracker-->
+        <scene sceneID="f7n-rH-A1z">
+            <objects>
+                <navigationController title="Goal Tracker" automaticallyAdjustsScrollViewInsets="NO" id="41X-O7-Beu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Goal Tracker" id="4ML-NG-Rjp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Gu-wP-QCw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dVA-2E-ycj" kind="relationship" relationship="rootViewController" id="78z-fy-3Ev"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbh-jN-Mh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113.0434782608697" y="791.51785714285711"/>
         </scene>
     </scenes>
     <resources>
