@@ -11,4 +11,5 @@ import UIKit
 class GoalTracker {
     var goal = ""
     var important = false
-}
+    }
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -73,8 +73,8 @@
                                 <color key="shadowColor" red="0.61178845169999996" green="0.85180962090000001" blue="0.9804156423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Screen Shot 2020-07-16 at 12.04.06 AM" translatesAutoresizingMaskIntoConstraints="NO" id="9qC-a8-o1r">
-                                <rect key="frame" x="0.0" y="751" width="414" height="91"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-07-16 at 12.04.06 AM" translatesAutoresizingMaskIntoConstraints="NO" id="9qC-a8-o1r">
+                                <rect key="frame" x="0.5" y="751" width="414" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="6xM-Ae-AKd"/>
                                     <constraint firstAttribute="height" constant="91" id="QsJ-Au-L0h"/>
@@ -113,9 +113,7 @@
                                 <color key="tintColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button" image="sun.max.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="SNo-iO-raH" kind="popoverPresentation" popoverAnchorView="WW7-yZ-Hsi" id="Sfw-Cd-Voy">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="nJY-Pw-Fn7" kind="showDetail" id="vQa-xj-WMW"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stem logo" translatesAutoresizingMaskIntoConstraints="NO" id="Aln-RV-HY6">
@@ -148,6 +146,7 @@
                             <constraint firstItem="tao-Ts-QdV" firstAttribute="leading" secondItem="A6O-D9-615" secondAttribute="leading" constant="79" id="NCf-FY-aBv"/>
                             <constraint firstItem="A6O-D9-615" firstAttribute="trailing" secondItem="Aln-RV-HY6" secondAttribute="trailing" constant="38" id="PsI-1Z-qq3"/>
                             <constraint firstItem="tao-Ts-QdV" firstAttribute="top" secondItem="pTY-sh-jag" secondAttribute="bottom" constant="683" id="QIz-do-w4e"/>
+                            <constraint firstItem="9qC-a8-o1r" firstAttribute="centerX" secondItem="WW7-yZ-Hsi" secondAttribute="centerX" id="RVO-7H-Ovn"/>
                             <constraint firstItem="WHl-37-wlo" firstAttribute="top" secondItem="pTY-sh-jag" secondAttribute="bottom" constant="682" id="U3o-IR-G4S"/>
                             <constraint firstItem="WW7-yZ-Hsi" firstAttribute="leading" secondItem="tao-Ts-QdV" secondAttribute="trailing" constant="82.5" id="U6a-G1-3HN"/>
                             <constraint firstItem="9qC-a8-o1r" firstAttribute="top" secondItem="pTY-sh-jag" secondAttribute="bottom" constant="653" id="ihJ-N6-Ye5"/>
@@ -257,6 +256,15 @@
                                     <segue destination="P7Z-PJ-yiQ" kind="presentation" id="HQe-8H-QLu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2L-gx-Wie">
+                                <rect key="frame" x="3" y="3" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="Cdc-xo-LyU" kind="show" id="MDc-Wb-pC9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -282,6 +290,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qDC-nh-iKL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FgT-MO-PpZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpg-AP-Zag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -325,8 +334,8 @@
                                     <segue destination="JSH-cn-8TN" kind="presentation" id="Nop-y7-6Kg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Women in Mathematics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-w6-xP1">
-                                <rect key="frame" x="20" y="133" width="374" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Women in Mathematics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-w6-xP1">
+                                <rect key="frame" x="20.5" y="133" width="374" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="YKJ-G5-MK4"/>
                                     <constraint firstAttribute="width" constant="374" id="eXR-3l-xGc"/>
@@ -337,6 +346,15 @@
                                 <color key="shadowColor" red="0.51456967519999997" green="0.79466416539999996" blue="0.1302022313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCy-Ov-qCR">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="ceb-6w-Uz3" kind="show" id="3VC-lJ-ofq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -346,6 +364,7 @@
                             <constraint firstItem="IrO-gZ-JwU" firstAttribute="trailing" secondItem="IL5-g4-fSj" secondAttribute="trailing" constant="39" id="CoN-B2-K3j"/>
                             <constraint firstItem="SX1-R3-8v0" firstAttribute="top" secondItem="oXo-w6-xP1" secondAttribute="bottom" constant="85" id="E0l-n4-oN7"/>
                             <constraint firstItem="qgg-Xo-FEp" firstAttribute="top" secondItem="SX1-R3-8v0" secondAttribute="bottom" constant="80" id="Ev9-co-UtK"/>
+                            <constraint firstItem="oXo-w6-xP1" firstAttribute="centerX" secondItem="SX1-R3-8v0" secondAttribute="centerX" id="I4m-ZS-aGf"/>
                             <constraint firstItem="qgg-Xo-FEp" firstAttribute="leading" secondItem="IL5-g4-fSj" secondAttribute="trailing" constant="-316" id="Lzs-bz-8TO"/>
                             <constraint firstItem="SX1-R3-8v0" firstAttribute="top" secondItem="oXo-w6-xP1" secondAttribute="bottom" constant="85" id="aRO-qc-Grn"/>
                             <constraint firstItem="SX1-R3-8v0" firstAttribute="leading" secondItem="IrO-gZ-JwU" secondAttribute="leading" constant="40" id="bVp-hD-84M"/>
@@ -355,6 +374,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IrO-gZ-JwU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Rce-1U-Ctw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3b-Nb-yQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,6 +424,15 @@
                                     <constraint firstAttribute="height" constant="198" id="SuN-JD-mZS"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IN-UH-eyV">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="i3p-9t-gfV" kind="show" id="OEb-bX-W0N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -473,6 +502,15 @@
                                     <segue destination="Sfm-02-FhV" kind="presentation" id="ywa-7D-HyG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9z-mz-lC5">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="ceb-6w-Uz3" kind="show" id="fPj-S4-PhJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -492,6 +530,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5gV-ja-ndU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VOQ-o6-TbZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbZ-eB-KiL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,6 +580,15 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-RN-epX">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="7qF-vB-t0O" kind="show" id="7xw-5y-pVk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -618,6 +666,15 @@
                                     <segue destination="otv-po-jOb" kind="presentation" id="uKx-mP-yhp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dP-tZ-Bb0">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="ceb-6w-Uz3" kind="show" id="W4d-CS-aKZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -638,6 +695,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DZH-X1-Baw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Sgj-dD-ztH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gU2-lC-mJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -687,6 +745,15 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rld-9F-eNd">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="P7Z-PJ-yiQ" kind="show" id="8AY-wA-l4E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -757,6 +824,15 @@
                                     <segue destination="BMY-Z7-hLJ" kind="presentation" id="kkd-PC-0fh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B12-Mx-ID7">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="ceb-6w-Uz3" kind="show" id="BHw-E2-MAd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -776,6 +852,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u6I-bf-TST"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XVP-E2-nWo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uul-Wl-Xaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -825,6 +902,15 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7e-BF-dg8">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="eyk-sZ-giX" kind="show" id="uSB-Hy-wnr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -849,35 +935,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUy-lz-bBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="417" y="-621"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Znb-pr-51K">
-            <objects>
-                <viewController id="SNo-iO-raH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xRE-lQ-knR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Affirmations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2t-sk-aF7">
-                                <rect key="frame" x="96" y="71" width="222" height="95"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="KVK-Ai-RSN" firstAttribute="trailing" secondItem="l2t-sk-aF7" secondAttribute="trailing" constant="96" id="2qr-yv-4K6"/>
-                            <constraint firstItem="KVK-Ai-RSN" firstAttribute="bottom" secondItem="l2t-sk-aF7" secondAttribute="bottom" constant="642" id="Dk4-6E-S39"/>
-                            <constraint firstItem="l2t-sk-aF7" firstAttribute="leading" secondItem="KVK-Ai-RSN" secondAttribute="leading" constant="96" id="YOB-la-afc"/>
-                            <constraint firstItem="l2t-sk-aF7" firstAttribute="top" secondItem="KVK-Ai-RSN" secondAttribute="top" constant="71" id="hXu-Td-iWT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="KVK-Ai-RSN"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0pr-do-STv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="118.84057971014494" y="791.51785714285711"/>
         </scene>
         <!--Goal Tracker-->
         <scene sceneID="a4x-Sv-lz2">
@@ -1095,6 +1152,74 @@
             </objects>
             <point key="canvasLocation" x="2869.5652173913045" y="791.51785714285711"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="DYl-4o-kdz">
+            <objects>
+                <viewController id="nJY-Pw-Fn7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mhH-TO-hGo" customClass="DailyAffirmations">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhg-rs-5xn">
+                                <rect key="frame" x="112" y="492" width="190" height="105"/>
+                                <color key="backgroundColor" red="0.59787400199999996" green="0.69521335660000005" blue="0.62438434210000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="21"/>
+                                <state key="normal" title="new affirmation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button:" destination="mhH-TO-hGo" eventType="touchUpInside" id="faj-fy-xwO"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sometimes you need a little motivation to get through the day; we understand that! Click the button for a quick cheer-me-up!" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TN8-Qw-8m6">
+                                <rect key="frame" x="69" y="221" width="276" height="216"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="3ec-hZ-iWW"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Affirmations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxT-la-JfX">
+                                <rect key="frame" x="77" y="85" width="260" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="1g3-Wq-e5r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrv-A2-HGW">
+                                <rect key="frame" x="0.0" y="20" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="Cdc-xo-LyU" kind="show" id="tGx-52-qvG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DxT-la-JfX" firstAttribute="centerX" secondItem="mhH-TO-hGo" secondAttribute="centerX" id="3Ka-T4-CzE"/>
+                            <constraint firstItem="TN8-Qw-8m6" firstAttribute="top" secondItem="mhH-TO-hGo" secondAttribute="top" constant="221" id="Huc-Cg-Vsf"/>
+                            <constraint firstItem="DxT-la-JfX" firstAttribute="centerX" secondItem="uhg-rs-5xn" secondAttribute="centerX" id="NtW-z9-oOw"/>
+                            <constraint firstItem="TN8-Qw-8m6" firstAttribute="leading" secondItem="s5b-zl-j6g" secondAttribute="leading" constant="69" id="Tib-oe-yPq"/>
+                            <constraint firstItem="DxT-la-JfX" firstAttribute="centerX" secondItem="TN8-Qw-8m6" secondAttribute="centerX" id="YTK-tv-RkK"/>
+                            <constraint firstItem="uhg-rs-5xn" firstAttribute="top" secondItem="TN8-Qw-8m6" secondAttribute="bottom" constant="55" id="Zti-h7-nFJ"/>
+                            <constraint firstItem="DxT-la-JfX" firstAttribute="top" secondItem="s5b-zl-j6g" secondAttribute="top" constant="85" id="pha-ni-kem"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s5b-zl-j6g"/>
+                        <connections>
+                            <outlet property="affirmations" destination="TN8-Qw-8m6" id="6ax-b0-Jog"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hun-qd-Fts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="805.58035714285711"/>
+        </scene>
         <!--Goal Tracker-->
         <scene sceneID="f7n-rH-A1z">
             <objects>
@@ -1116,7 +1241,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="uSB-Hy-wnr"/>
         <segue reference="uKx-mP-yhp"/>
+        <segue reference="8AY-wA-l4E"/>
+        <segue reference="7xw-5y-pVk"/>
+        <segue reference="OEb-bX-W0N"/>
+        <segue reference="BHw-E2-MAd"/>
+        <segue reference="tGx-52-qvG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Screen Shot 2020-07-16 at 12.04.06 AM" width="450" height="130"/>

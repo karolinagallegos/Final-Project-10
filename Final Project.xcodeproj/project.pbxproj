@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AFC64A924C1F50000B7F1F8 /* DailyAffirmationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC64A824C1F50000B7F1F8 /* DailyAffirmationsViewController.swift */; };
 		5A2626D124C0BE950043DB44 /* GoalTrackerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2626D024C0BE950043DB44 /* GoalTrackerTableViewController.swift */; };
 		5A2626D324C0BF0D0043DB44 /* GoalTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2626D224C0BF0D0043DB44 /* GoalTracker.swift */; };
 		5A2626D524C0D0800043DB44 /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2626D424C0D0800043DB44 /* AddGoalViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AFC64A824C1F50000B7F1F8 /* DailyAffirmationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAffirmationsViewController.swift; sourceTree = "<group>"; };
 		5A2626D024C0BE950043DB44 /* GoalTrackerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTrackerTableViewController.swift; sourceTree = "<group>"; };
 		5A2626D224C0BF0D0043DB44 /* GoalTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTracker.swift; sourceTree = "<group>"; };
 		5A2626D424C0D0800043DB44 /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				AD9E8C0A24BE4F0000FA01BF /* ViewController.swift */,
 				AD9E8C1D24BF87FB00FA01BF /* HomePageViewController.swift */,
 				AD9E8C0C24BE4F0000FA01BF /* Main.storyboard */,
+				0AFC64A824C1F50000B7F1F8 /* DailyAffirmationsViewController.swift */,
 				AD64D60524C10FD200213243 /* ScienceViewController.swift */,
 				AD9E8C2124BF94B000FA01BF /* HomeUIBarButtonItem.swift */,
 				AD9E8C1224BE4F0400FA01BF /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2626D724C0E3670043DB44 /* CompleteGoalViewController.swift in Sources */,
+				0AFC64A924C1F50000B7F1F8 /* DailyAffirmationsViewController.swift in Sources */,
 				5A2626D524C0D0800043DB44 /* AddGoalViewController.swift in Sources */,
 				AD9E8C0B24BE4F0000FA01BF /* ViewController.swift in Sources */,
 				5A2626D124C0BE950043DB44 /* GoalTrackerTableViewController.swift in Sources */,
