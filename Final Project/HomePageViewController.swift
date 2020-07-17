@@ -18,9 +18,9 @@ class HomePageViewController: UIViewController {
     
     }
 
-    @IBAction func HomeButton(_ sender: UIButton) {
+/* @IBAction func HomeButton(_ sender: UIButton) {
 
-    }
+    }*/
     
     /*
     // MARK: - Navigation

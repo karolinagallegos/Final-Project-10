@@ -9,18 +9,28 @@
 import UIKit
 
 class DailyAffirmationsViewController: UIViewController {
-
+  
+    let quoteArray = ["You are doing your best!", "You can do this!", "Nothing can stop you if you keep trying!", "You're doing amazing; don't let anyone tell you otherwise.", "You are powerful, and you have all the time in the world.", "You are able to overcome anything!", "You are ready to take life by the reins! You are in control!"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func button(_ sender: Any) {
-        let quoteArray = ["You are doing your best!", "You can do this!", "Nothing can stop you if you keep trying!", "You're doing amazing; don't let anyone tell you otherwise.", "You are powerful, and you have all the time in the world.", "You are able to overcome anything!", "You are ready to take life by the reins! You are in control!"]
-        self.affirmations.text = quoteArray[Int(arc4random_uniform(UInt32(quoteArray.count)))]
+    @IBOutlet weak var changeAffirmation: UILabel!
+    
+ 
+    @IBAction func affirmationButton(_ sender: Any) {
+    
+
+       /* self.changeAffirmation.text = quoteArray[Int(arc4random_uniform(UInt32(quoteArray.count)))] */
+        let number = Int.random(in: 0 ..< 7);
+        let element = quoteArray[number]
+        
+        self.changeAffirmation.text = element
     }
     
-    @IBOutlet weak var affirmations: UITextView!
+
     
     /*
     // MARK: - Navigation
